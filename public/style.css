@@ -1,0 +1,32 @@
+
+
+* {
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0;
+}
+
+.title {
+    background-image: url('hogwarts.jpeg');
+}
+
+header {
+    font-family: Harry P;
+    font-size: 70px;
+}
+
+.info {
+    border: solid 1px black;
+    background-color: white;
+    opacity: .5;
+    margin: 1rem;
+    padding: 1rem;
+    height: 15rem;
+}
+
+p, small {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 120%;
+    justify-content: center;
+}
+
