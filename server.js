@@ -10,7 +10,6 @@ app.use(express.static('public'))
 app.get('/', (req, res) => {
     const posts = postBank.list()
     res.send(`
-    <html>
     <head>
         <title>Wizarding World of Harry Potter</title>
         <link rel ="stylesheet" href="/style.css" />
@@ -39,9 +38,9 @@ app.get('/books/:id', (req, res) => {
     if (!post.id) {
         res.status(404)
         const html = `
-        <html>
+        <html class="bg">
         <head>
-            <title>Wizarding World of Harry Potter</title>
+            <title>Page Not Found</title>
             <link rel ="stylesheet" href="/style.css" />
         </head>
         <body>
@@ -71,6 +70,23 @@ app.get('/books/:id', (req, res) => {
         </body>
     </html>
     `)}
+})
+
+app.use((err, req, res, next) => {
+    res.status(err.status || 500).send(`
+    <html>
+        <head>
+            <title>Page Not Found</title>
+            <link rel ="stylesheet" href="/style.css" />
+        </head>
+        <body>
+            <div class="not-found">
+            <p>Accio Page! 🧙‍♀️ ... Page Not Found</p>
+            <img src="/dumbledore.gif" />
+      </div>
+        </body>
+        </html>
+    `)
 })
 
 const PORT = 3000;

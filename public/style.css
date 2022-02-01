@@ -27,6 +27,7 @@ header{
     opacity: .8;
     border: solid 4px white;
     border-radius: 2rem;
+    margin: 0 4rem;
 }
 
 .info, .content {
@@ -87,4 +88,9 @@ header a:link {
 header a:hover {
     text-decoration: none;
     font-weight: bolder;
+}
+
+.bg {
+    background-color: black;
+    color: white;
 }
