@@ -3,36 +3,70 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Harry P';
+    src: url("/Users/yingying/FSA Junior Phase/express_dealers_choice/public/HARRYP__.TTF");
+}
+
+@font-face {
+    font-family: 'EB Garamound';
+    src: url("/Users/yingying/FSA Junior Phase/express_dealers_choice/public/EBGaramond-VariableFont_wght.ttf");
+}
 .title {
     background-image: url('hogwarts.jpeg');
     text-align: center;
-    justify-content: center;
 }
 
-header {
-    font-family: Harry P;
+header{
+    font-family: 'Harry P';
     letter-spacing: .5rem;
     font-size: 70px;
     padding: 1.5rem;
     color: white;
-    opacity: .75;
+    opacity: .8;
+    border: solid 4px white;
+    border-radius: 2rem;
 }
 
-.info {
-    border: solid 2px black;
+.info, .content {
     display: inline-block;
-    margin: .5rem;
+    margin: 1rem;
     background-color: white;
-    opacity: .5;
-    height: 15rem;
+    opacity: .65;
+    height: 11rem;
+    font-family: 'EB Garamound'; 
 }
 
-p, small {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.info p{
+    font-size: 130%;
+    padding: 2.5rem 1.5rem 1.2rem 1.5rem;
+    line-height: 0;
+}
+
+a:link {
+    text-decoration: underline;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: gray;
+}
+
+.header {
+    font-size: 130%;
+}
+
+.content {
     font-size: 120%;
-    padding: 1.5rem;
-}
-
-small {
-    font-size: 80%;
+    height:inherit;
+    margin: 3rem 20rem 5rem 20rem;    
+    padding: 3rem;
+    line-height: 3rem;
+    text-indent: 5rem;
+    text-align: left;
+    opacity: .85;
+    background-color: black;
+    color: white;
+    border-radius: 1rem;
 }
