@@ -15,6 +15,7 @@
 .title {
     background-image: url('hogwarts.jpeg');
     text-align: center;
+    color: black;
 }
 
 header{
@@ -43,13 +44,13 @@ header{
     line-height: 0;
 }
 
-a:link {
+.info a:link{
     text-decoration: underline;
     color: black;
 }
 
-a:hover {
-    text-decoration: underline;
+.info a:hover{
+    text-decoration: none;
     color: gray;
 }
 
@@ -69,4 +70,21 @@ a:hover {
     background-color: black;
     color: white;
     border-radius: 1rem;
+}
+
+.not-found {
+    font-family: Harry P;
+    font-size: 400%;
+    text-align: center;
+    margin: 10rem;
+}
+
+header a:link {
+    text-decoration: underline;
+    color: white;
+}
+
+header a:hover {
+    text-decoration: none;
+    font-weight: bolder;
 }

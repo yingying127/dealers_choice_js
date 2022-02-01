@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
             ${posts.map(post => `
                 <div class="info">
                         <p><a href="/books/${post.id}">Book ${post.id}:</a></p>
-                        <p><a href="/books/${post.id}">${post.title}</a></p>
+                        <p><a href="/books/${post.id}">${post.name}${post.title}</a></p>
                         <small class="date">
                             ${post.author} | Release Year: ${post.release}
                         </small>
@@ -36,6 +36,23 @@ app.get('/', (req, res) => {
 app.get('/books/:id', (req, res) => {
     const post = postBank.find(req.params.id);
     const posts = [ post ]
+    if (!post.id) {
+        res.status(404)
+        const html = `
+        <html>
+        <head>
+            <title>Wizarding World of Harry Potter</title>
+            <link rel ="stylesheet" href="/style.css" />
+        </head>
+        <body>
+            <div class="not-found">
+            <p>Accio Page! 🧙‍♀️ ... Page Not Found</p>
+            <img src="/dumbledore.gif" />
+      </div>
+        </body>
+        </html>`
+        res.send(html)
+    } else {
     res.send(`
     <html>
     <head>
@@ -44,7 +61,7 @@ app.get('/books/:id', (req, res) => {
     </head>
         <body>
             <div class="title">
-            <header>${post.title}</header>
+            <header><a href="/">${post.name}</a>${post.title}</header>
             ${posts.map(post => `
                 <div class="content">
                     <p>${post.content}</p>
@@ -53,7 +70,7 @@ app.get('/books/:id', (req, res) => {
             </div>
         </body>
     </html>
-    `)
+    `)}
 })
 
 const PORT = 3000;
