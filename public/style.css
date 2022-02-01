@@ -1,32 +1,38 @@
-
-
 * {
-    box-sizing: border-box;
-    text-align: center;
     margin: 0;
+    box-sizing: border-box;
 }
 
 .title {
     background-image: url('hogwarts.jpeg');
+    text-align: center;
+    justify-content: center;
 }
 
 header {
     font-family: Harry P;
+    letter-spacing: .5rem;
     font-size: 70px;
+    padding: 1.5rem;
+    color: white;
+    opacity: .75;
 }
 
 .info {
-    border: solid 1px black;
+    border: solid 2px black;
+    display: inline-block;
+    margin: .5rem;
     background-color: white;
     opacity: .5;
-    margin: 1rem;
-    padding: 1rem;
     height: 15rem;
 }
 
 p, small {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 120%;
-    justify-content: center;
+    padding: 1.5rem;
 }
 
+small {
+    font-size: 80%;
+}
