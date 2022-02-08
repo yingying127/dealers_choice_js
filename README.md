@@ -1,6 +1,6 @@
 Dealers Choice: Harry Potter Books
 
-This is my first project creating a webpage with Express and using HTML and CSS to amplify it.
+This is my first project creating a webpage with Express and using Javascript and CSS to amplify it.
 
 Availibity on the PORT will allow you to see the many books of Harry Potter, written by J.K. Rowling.
 
